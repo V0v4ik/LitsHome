@@ -16,11 +16,12 @@ public class Task2 {
         kids.add(new Kid ("Yulya", 10));
         kids.add(new Kid ("Taras", 15));
         kids.add(new Kid ("Oleh", 6));
-        //System.out.println(kids.toString());
+        System.out.println(kids.toString());
         //Sorting set by field "age"
-        kids.stream().sorted(Comparator.comparing(Kid::getAge))
-                .forEach(e -> System.out.println("Name: "+e.getName()+", Age:"+e.getAge()));
-        System.out.println();
+//                kids.stream()
+//                .sorted(Comparator.comparing(Kid::getAge))
+//                .forEach(e -> System.out.println("Name: "+e.getName()+", Age:"+e.getAge()));
+//        System.out.println();
 
     }
 }

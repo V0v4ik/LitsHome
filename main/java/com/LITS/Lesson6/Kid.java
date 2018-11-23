@@ -51,6 +51,7 @@ public class Kid implements Comparable<Kid> {
 
     @Override
     public int compareTo(Kid o) {
-        return this.getName().compareTo(o.getName());
+        //return this.getName().compareTo(o.getName());
+        return Integer.compare(this.getAge(), o.getAge());
     }
 }

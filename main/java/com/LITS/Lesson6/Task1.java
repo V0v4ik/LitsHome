@@ -12,17 +12,20 @@ public class Task1 {
                 "Oksana", "Vlad", "Ihor", "Andriy", "Nastya", "Ira", "Vika");
         //make set from list
         Set<String> names = new HashSet<>(tmp);
-        Set<String> delete = new HashSet<>();
+
+        //Set<String> delete = new HashSet<>();
+
         //print size of set
         System.out.println("Size of names = " + names.size());
         //searching names for remove
         for (String name:names){
             String first = Character.toString(name.charAt(0));
+            //name.startsWith("A");
             if (first.equals("A") || first.equals("B") || first.equals("S") || first.equals("V") || first.equals("P"))
-                delete.add(name);
+                names.remove(name);
         }
         //removing names we found
-        names.removeAll(delete);
+        //names.removeAll(delete);
         System.out.println(names);
     }
 

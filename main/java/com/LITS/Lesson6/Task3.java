@@ -16,13 +16,18 @@ public class Task3 {
         kids.add(new Kid ("Olya", 10));
         kids.add(new Kid ("Taras", 12));
         kids.add(new Kid ("Stepan", 11));
+
         //System.out.println(kids);
-        Set<Kid> youngerKids = new HashSet<>();
-        for (Kid kid : kids) {
-            if (kid.getAge() < 10)
-                youngerKids.add(kid);
-        }
-        kids.removeAll(youngerKids);
-        System.out.println(kids);
+//        Set<Kid> youngerKids = new HashSet<>();
+//        for (Kid kid : kids) {
+//            if (kid.getAge() < 10)
+//                youngerKids.add(kid);
+//        }
+//        kids.removeAll(youngerKids);
+//        System.out.println(kids);
+
+      kids.stream()
+            .filter(kid -> kid.getAge() > 10)
+            .forEach(kid -> System.out.println(kid));
     }
 }
