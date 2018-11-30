@@ -1,8 +1,8 @@
 package com.LITS.Lesson7;
 
 public class Student implements Comparable<Student> {
-    int age;
-    String name;
+    private int age;
+    private String name;
 
     public int getAge() {
         return age;
