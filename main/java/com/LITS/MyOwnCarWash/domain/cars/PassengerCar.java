@@ -8,6 +8,7 @@ import static com.LITS.MyOwnCarWash.domain.enums.WashServices.*;
 public class PassengerCar extends Car {
     //make a Map of services and prices
     private Map<String, Integer> services;
+    private Map.Entry<String, Integer> service;
 
     //make a constructor that is creating services map
     public PassengerCar() {
@@ -31,5 +32,26 @@ public class PassengerCar extends Car {
                 passCarServices = passCarServices + '\n' + entry.getKey() + " " + entry.getValue() + " UAH";
         }
         return passCarServices;
+    }
+    // this method is to set entries to the receipt
+    public Map.Entry<String, Integer> getService() {
+        return service;
+    }
+    //check is service from input exist and ready to use
+    public Boolean serviceCheck(String inputLine){
+        Boolean serviceForThisCar = false;
+        for (Map.Entry<String, Integer> entry : services.entrySet()) {
+            if (entry.getKey().toLowerCase().equals(inputLine.replaceAll("\\s+", "").toLowerCase())) {
+                serviceForThisCar = true;
+
+                if (entry.getValue().equals(0)) {
+                serviceForThisCar = null;
+                } else {
+                    this.service = entry;
+                }
+                break;
+            }
+        }
+        return serviceForThisCar;
     }
 }

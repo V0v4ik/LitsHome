@@ -5,7 +5,7 @@ public enum AdditionalServices {
     Coffee (20),
     Juice(15),
     HotDog(45),
-    Cigarets(0);
+    Cigarettes(0);
 
     private int price;
 

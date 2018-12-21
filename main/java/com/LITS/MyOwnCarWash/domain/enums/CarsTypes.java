@@ -6,5 +6,5 @@ public enum CarsTypes {
     SUV,
     Motorcycle,
     Truck,
-    HeavyDutyWehicles;
+    HeavyDutyWehicles
 }
